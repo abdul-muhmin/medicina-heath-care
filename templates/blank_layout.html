@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICINA HEATH CARE </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="container">
+            {% include "menu.html" %}
+    
+            {% block banner %}
+            {% comment %} {% include "banner_layout.html" %} {% endcomment %}
+            
+            {% endblock banner %}
+        </div>
+    </div>
+    {% block content %}
+
+
+    {% endblock content %}
+    
+
+    
+
+    <!-- Brands -->
+
+    
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>MEDICINA HEATH CARE</h3>
+                    <p>PALAKKAD,PERINTHALMANNA AND KANNUR.</p>
+                    <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'images/logom.png' %}">
+                    <p>Medina Health Care: Compassionate, comprehensive care for a healthier tomorrow.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><strong>Palakkad</strong><br></li>
+                        <li>Ph: +91 86065 63222</li>
+                        <li><strong>Perithalmanna</strong><br></li>
+                        <li>Ph: +91 86065 62222</li>
+                        <li><strong>Kannur</strong><br></li>
+                        <li>Ph: +91 80863 65222</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/medicinapmna/"><li>Facebook</li></a>
+                        <a href="https://www.justdial.com/Malappuram/Medicina-Surgicals-Near-Municipal-Office-Perintalmanna/9999PX483-X483-160921120124-W8T8_BZDET"><li>Justdail</li></a>
+                        <a href="https://www.instagram.com/medicinahealthcare/"><li>Instagram</li></a>
+                        <a href="https://www.bizkl.com/shop/medicina-health-care-palakkad/"><li>bizkl.com</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+    {% block extra_scripts %}
+    
+    
+    {% endblock extra_scripts %}
+</body>
+
+</html>
